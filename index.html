@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <!-- =========================
+       FONTS
+    ========================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- =========================
+       STYLES
+    ========================= -->
+    <style>
+
+        :root {
+            /* Core Brand */
+            --primary: #9C7766;
+            --secondary: #A88473;
+            --bg: #F8F5F2;
+            --text: #2B2B2B;
+            --soft-white: #F2EFEA;
+            /* Promo */
+            --promo-red: #ff9d93;
+            --promo-orange: #E36A1C;
+            --promo-gold: #F2C14E;
+            --promo-cream: #F5E6C8;
+        }
+
+        /* =========================
+           BASE
+        ========================= */
+
+        body {
+            margin: 30;
+            font-family: "Chewy", cursivee;
+            background: var(--bg);
+            color: var(--text);
+            justify-content: center;
+        }
+
+        .top-banner {
+            width: 100%;
+            height: 33vh; /* 🔥 1/3 of screen height */
+            overflow: hidden;
+        }
+
+            .top-banner img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain; /* shows full image without cropping */
+                display: block;
+                background-color: #faa7a7;
+            }
+            
+        .heading {
+            font-family: Verdana;
+            color:black;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font: Verdana;
+        }
+
+        .section-title {
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Verdana;
+            font-size: 30px;
+            font-weight: normal;
+            color: #ff6666;
+        }
+
+        .section-title2 {
+            padding: 15px;
+            text-align:center;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: Verdana;
+            font-size: 25px;
+            font-weight: normal;
+            color: #ff6666;
+        }
+
+        .product-content {
+            padding: 15px;
+            text-align: center;
+            font: Verdana;
+            color: #e31a1a;
+        }
+
+        .heading {
+            text-align: center;
+            font: Verdana;
+            font-size: 17px;
+            font: Verdana;
+            font-weight:normal;
+        }
+
+        .content .btn {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            font: Verdana;
+        }
+
+        .btn-dark {
+            display: block;
+            width: 80%;
+            margin: 10px auto 0;
+            text-align: center;
+            font-family: Bahnschrift;
+        }
+        /* =========================
+           HEADER
+        ========================= */
+        header {
+            text-align: center;
+            display: flex;
+            padding: 15px 25px;
+            background: #faa7a7;
+            border-bottom: 1px solid #eee;
+            justify-content: center;
+            top: 0;
+            position: sticky;
+        }
+
+        header1 {
+            text-align: center;
+            display: flex;
+            padding: 15px 25px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            justify-content: center;
+            top: 0;
+        }
+
+        .logo {
+            font-family: Verdana;
+            font-size: 15px;
+            color: #fff;
+            position: sticky;
+            text-decoration: none;
+        }
+
+        .logo1 {
+            font-family: Verdana;
+            font-size: 25px;
+            font-weight: bolder;
+            color: #e31a1a;
+          
+        }
+        .logo a {
+            color: #dae9ec;
+        }
+        .logo a:hover {
+            opacity: 0.7;
+        }
+
+        .logo2 {
+            color: #a18b8b;
+            font-weight: 10;
+            font-size: 20px;
+            font-family: Verdana;
+            align-content:center;
+            text-align:center;
+        }
+        .logo3 {
+            color: #a18b8b;
+            font-weight: 10;
+            font-size: 15px;
+            font-family: Verdana;
+            align-content: center;
+            text-align: center;
+        }
+        /* =========================
+           HERO
+        ========================= */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            color: var(--soft-white);
+        }
+
+            .hero h1 {
+                font-size: 42px;
+                margin: 0;
+            }
+
+        /* =========================
+           GRID
+        ========================= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            font: Verdana;
+        }
+
+        .video-card .product-content
+         {
+            font-family: Bahnschrift;
+            color: #a18b8b;
+        }
+
+        .product-card
+        {
+            background: #ffffff;
+        }
+
+
+        /* =========================
+           VIDEO CARDS
+        ========================= */
+        .video-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            font-family: #a18b8b;
+        }
+
+        /* =========================
+           PRODUCT CARD
+        ========================= */
+        .product-card {
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .product-content {
+            padding: 15px;
+        }
+
+        .price {
+            color: #ff6666;
+            font-weight: 400;
+            font-size: 13px;
+            font-family: Verdana;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+        .socials {
+            margin-top: 15px;
+        }
+
+            .socials a {
+                color: #fff;
+                margin: 0 10px;
+                text-decoration: none;
+                font-size: 14px;
+                border-bottom: 1px solid transparent;
+                transition: 0.3s;
+            }
+
+                .socials a:hover {
+                    border-bottom: 1px solid #fff;
+                }
+
+        .btn-primary {
+            text-align: center;
+            background: #fff;
+            color: #075E54;
+            border-radius: 10px;
+            border: 2px solid #25D366;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 15px;
+            font-family: Bahnschrift;
+            text-decoration: none;
+            margin-top: auto;
+        }
+
+            .btn-primary:hover {
+                background: #e31a1a;
+                color: #fff;
+                font-family:Bahnschrift;
+            }
+
+            .btn-primary:hover {
+                background: #25D366;
+            }
+
+        .btn-dark {
+            text-align: center;
+            background: #fff;
+            color: #ff6666;
+            border-radius: 10px;
+            border: 2px solid #ff6666;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            font-size: 15px;
+            font-family: Bahnschrift;
+        }
+            .btn-dark:hover {
+                background: #ff6666;
+                color: #fff;
+                font-family: Bahnschrift;
+            }
+
+
+        .btn-primary,
+        .btn-dark {
+            flex: 1;
+            height: 42px; /* force same height */
+            display: flex;
+            align-items: center; /* vertical center */
+            justify-content: center; /* horizontal center */
+            padding: 0; /* remove uneven padding */
+            line-height: 1; /* removes text offset */
+            box-sizing: border-box; /* keeps border inside height */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #faa7a7;
+            color: #fff;
+            margin-top: 10px;
+            font-size: 15px;
+            font-family: Verdana:
+        }
+
+        .socials {
+            margin-top: 10px;
+        }
+
+            .socials a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 8px;
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                background: #d97070;
+                transition: all 0.3s ease;
+            }
+
+                .socials a svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: #ffffff;
+                }
+
+                /* Glow hover */
+                .socials a.instagram:hover {
+                    background: #E1306C;
+                    box-shadow: 0 0 12px #E1306C, 0 0 25px #E1306C;
+                }
+
+                .socials a.facebook:hover {
+                    background: #1877F2;
+                    box-shadow: 0 0 12px #1877F2, 0 0 25px #1877F2;
+                }
+
+                .socials a.tiktok:hover {
+                    background: #000;
+                    box-shadow: 0 0 12px #00f2ea, 0 0 25px #ff0050;
+                }
+
+        /* =========================
+           SLIDER
+        ========================= */
+        .slider {
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 220px; /* control slider height here */
+            object-fit: cover; /* 🔥 fills perfectly without distortion */
+            border-radius: 12px;
+        }
+
+            .slide.active {
+                display: block;
+            }
+
+            .slide.active {
+                display: block;
+            }
+
+        .slider button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .tools {
+            color: #a18b8b;
+            font-weight: 10;
+            font-size: 13px;
+            font-family: Verdana;
+            min-height:40px;
+        }
+
+        .slider button:first-of-type {
+            left: 10px;
+        }
+
+        .slider button:last-of-type {
+            right: 10px;
+        }
+
+
+        /* LIGHTBOX BACKGROUND */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+            #lightbox img {
+                max-width: 90%;
+                max-height: 85%;
+                border-radius: 10px;
+            }
+
+            /* CLOSE BUTTON */
+            #lightbox .close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                color: #fff;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+        /* ARROWS */
+        .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            user-select: none;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+        /* =========================
+           VIDEO POPUP
+        ========================= */
+        #videoPopup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .thumb-box {
+            width: 100%;
+            height: 200px; /* match your card size */
+            overflow: hidden;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+            .thumb-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* keeps layout consistent */
+            }
+
+
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            transition: opacity 1.8s ease;
+        }
+
+            .slide.active {
+                opacity: 1;
+            }
+       
+    </style>
+</head>
+
+<body>
+    <div class="top-banner">
+        <img src="banner.png" alt="WovenWhisp Banner">
+    </div>
+
+    <!-- =========================
+       HEADER
+    ========================= -->
+    <header>
+        <div class="logo">
+            Interested in JOJO custom bulks?
+            <a href="mailto:wovenwhisp@gmail.com">jojobraineboost@gmail.com</a>
+        </div>
+    </header>
+
+    <!-- =========================
+       TUTORIALS
+    ========================= -->
+    <h2 class="section-title">TUTORIALS</h2>
+    <h2 class="section-title2">Mat Weaving</h2>
+    <section class="grid">
+
+        <div class="video-card">
+
+            <div class="thumb-box">
+                <img src="https://img.youtube.com/vi/Ts3Qy8UvqwU/0.jpg">
+            </div>
+
+            <div class="product-content">
+                <h3 class="heading">Weaving the base</h3>
+
+                <div class="btn-dark" onclick="openVideo('Ts3Qy8UvqwU')">
+                    Watch
+                </div>
+            </div>
+
+        </div>
+
+        <div class="video-card">
+            <div class="thumb-box">
+                <img src="https://img.youtube.com/vi/QAyQ7F_ullg/0.jpg">
+            </div>
+            <div class="product-content">
+                <h3 class="heading">Weaving the Mat</h3>
+                <div class="btn-dark" onclick="openVideo('QAyQ7F_ullg')">Watch</div>
+            </div>
+        </div>
+        <div class="video-card">
+            <div class="thumb-box">
+                <img src="https://img.youtube.com/vi/AffLKijaAqg/0.jpg">
+            </div>
+            <div class="product-content">
+                <h3 class="heading">Joining the colors</h3>
+                <div class="btn-dark" onclick="openVideo('AffLKijaAqg')">Watch</div>
+            </div>
+        </div>
+        <div class="video-card">
+            <div class="thumb-box">
+                <img src="https://img.youtube.com/vi/ziG-jUAPsco/0.jpg">
+            </div>
+            <div class="product-content">
+                <h3 class="heading">Ending the Mat</h3>
+                <div class="btn-dark" onclick="openVideo('ziG-jUAPsco')">Watch</div>
+            </div>
+        </div>
+    </section>
+    <h2 class="section-title2">Basket weaving</h2>
+    <section class="grid">
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg">
+            <div class="product-content">
+                <h3 class="heading">Before starting</h3>
+                <div class="btn-dark" onclick="openVideo('z_ZH_8SLWls')">Watch</div>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg">
+            <div class="product-content">
+                <h3 class="heading">Weaving the base</h3>
+                <div class="btn-dark" onclick="openVideo('z_ZH_8SLWls')">Watch</div>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg">
+            <div class="product-content">
+                <h3 class="heading">Start the basket</h3>
+                <div class="btn-dark" onclick="openVideo('z_ZH_8SLWls')">Watch</div>
+            </div>
+        </div>
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg">
+            <div class="product-content">
+                <h3 class="heading">Ending - Petal weaving</h3>
+                <div class="btn-dark" onclick="openVideo('z_ZH_8SLWls')">Watch</div>
+            </div>
+        </div>
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg">
+            <div class="product-content">
+                <h3 class="heading">Ending - Traditional weaving</h3>
+                <div class="btn-dark" onclick="openVideo('z_ZH_8SLWls')">Watch</div>
+            </div>
+        </div>
+    </section>
+    <!-- =========================
+       PRODUCTS
+    ========================= -->
+    <h2 class="section-title">BUY KITS</h2>
+
+    <section class="grid">
+
+        <div class="product-card">
+
+            <div class="slider">
+                <img src="last1q.png" class="slide active">
+                <img src="last2.png" class="slide">
+                <img src="last3.png" class="slide">
+                <img src="last4.png" class="slide">
+                <img src="last5.png" class="slide">
+
+              
+            </div>
+
+            <div class="product-content">
+                <h3 class="heading">Mat Weaving Kit</h3>
+                <p class="tools">
+                    A Mini Version of Traditional Loom Weaving
+                </p>
+                <div class="price">1500 LKR</div>
+
+                <div class="buttons">
+                    <a href="https://wa.me/94710526731" class="btn-primary">Order</a>
+                    <div class="btn-dark" onclick="openVideo('ziG-jUAPsco')">Watch</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="slider">
+                <img src="cane4.png" class="slide active">
+                
+                
+            </div>
+
+            <div class="product-content">
+                <h3 class="heading">Two Mini Basket Weaving Kit</h3>
+                <p class="tools">
+                    For Weaving Lovers. Two Mini Baskets on Hand
+                </p>
+                <div class="price">1500 LKR</div>
+
+                <div class="buttons">
+                    <a href="https://wa.me/94710526731" class="btn-primary">Order</a>
+                    <div class="btn-dark" onclick="openVideo('z_ZH_8SLWls')">Watch</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="slider">
+                <img src="cane1.png" class="slide active">
+                <img src="cane2.png" class="slide">
+                <img src="cane5.png" class="slide">
+
+            </div>
+
+            <div class="product-content">
+                <h3 class="heading">Mini Basket Weaving Kit</h3>
+                <p class="tools">
+                    For Weaving Lovers
+                </p>
+                <div class="price">1500 LKR</div>
+
+                <div class="buttons">
+                    <a href="https://wa.me/94710526731" class="btn-primary">Order</a>
+                    <div class="btn-dark" onclick="openVideo('z_ZH_8SLWls')">Watch</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="product-card">
+
+            <div class="slider">
+                <img src="last.png" class="slide active">
+                <img src="last3.png" class="slide">
+               
+            </div>
+
+            <div class="product-content">
+                <h3 class="heading">Weaving Tool - 100PCS</h3>
+                <p class="tools">
+                    Only the Tool in Bulk
+                </p>
+                <div class="price">35000 LKR</div>
+
+                <div class="buttons">
+                    <a href="https://wa.me/94710526731" class="btn-primary">Order</a>
+                    <div class="btn-dark" onclick="openVideo('z_ZH_8SLWls')">Watch</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product-card">
+
+            <div class="slider">
+                <img src="yarn1.png" class="slide active">
+                <img src="yarn2.png" class="slide">
+                <img src="last6.png" class="slide">
+
+            </div>
+
+            <div class="product-content">
+                <h3 class="heading">Extra Yarn</h3>
+                <p class="tools">
+                    Six colors for Extra Work
+                </p>
+                <div class="price">1000 LKR</div>
+
+                <div class="buttons">
+                    <a href="https://wa.me/94710526731" class="btn-primary">Order</a>
+                    <div class="btn-dark" onclick="openVideo('z_ZH_8SLWls')">Watch</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    <h2 class="section-title">JOJO BRAIN BOOSTER</h2>
+    <div class="logo3">
+        <p>
+            We turn simple moments into meaningful learning.Each small step, each woven pattern, helps improve memory, coordination, and confidence.
+
+            Happy Hands, Curious Minds, & Learning Through Fun
+        </p>
+
+    </div>
+    <!-- =========================
+       VIDEO POPUP
+    ========================= -->
+    <div id="videoPopup">
+        <div style="width:90%; max-width:700px; position:relative;">
+            <span onclick="closeVideo()" style="color:#fff; position:absolute; top:-40px; right:0; font-size:30px; cursor:pointer;">✖</span>
+            <iframe id="videoFrame"
+                    width="100%"
+                    height="400"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- =========================
+       FOOTER
+    ========================= -->
+    <footer>
+        <p>
+            © 2026 WovenWhisp <br>
+            Kandy, Sri Lanka <br>
+            +94710526731
+        </p>
+
+        <div class="socials">
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/jojobrainboost/" class="instagram" target="_blank">
+                <svg viewBox="0 0 24 24">
+                    <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8
+                0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0
+                110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0
+                000-6zm4.8-.9a1.2 1.2 0 110 2.4 1.2 1.2 0
+                010-2.4z" />
+                </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://facebook.com/YOUR_LINK" class="facebook" target="_blank">
+                <svg viewBox="0 0 24 24">
+                    <path d="M13 22v-8h3l1-4h-4V7c0-1.1.3-2 2-2h2V1.5C16.6
+                1.2 15.3 1 14 1c-3 0-5 1.8-5 5v3H6v4h3v8h4z" />
+                </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@jojo_brain_booster" class="tiktok" target="_blank">
+                <svg viewBox="0 0 24 24">
+                    <path d="M16 2c.3 1.5 1.6 2.8 3 3v3c-1.3 0-2.5-.4-3.5-1v7.5a5.5
+                5.5 0 11-5.5-5.5c.4 0 .7 0 1 .1v3a2.5 2.5 0
+                102.5 2.5V2h2z" />
+                </svg>
+            </a>
+
+        </div>
+    </footer>
+
+    <!-- =========================
+       SCRIPTS
+    ========================= -->
+    <script>
+
+        function openVideo(videoId) {
+            const popup = document.getElementById("videoPopup");
+            const frame = document.getElementById("videoFrame");
+
+            frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0";
+            popup.style.display = "flex";
+        }
+
+        function closeVideo() {
+            const popup = document.getElementById("videoPopup");
+            const frame = document.getElementById("videoFrame");
+
+            frame.src = ""; // stops the video
+            popup.style.display = "none";
+        }
+
+
+        let currentIndex = 0;
+        let images = [];
+
+        document.querySelectorAll(".slider").forEach(slider => {
+            let slides = slider.querySelectorAll(".slide");
+
+            slides.forEach((img, index) => {
+                img.addEventListener("click", function () {
+                    images = Array.from(slides).map(i => i.src);
+                    currentIndex = index;
+                    openLightbox();
+                });
+            });
+        });
+
+        function openLightbox() {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = images[currentIndex];
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        function changeImage(direction) {
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            document.getElementById("lightbox-img").src = images[currentIndex];
+        }
+        document.querySelectorAll(".slider").forEach(slider => {
+
+            let slides = slider.querySelectorAll(".slide");
+            let index = 0;
+
+            setInterval(() => {
+                slides[index].classList.remove("active");
+
+                index = (index + 1) % slides.length;
+
+                slides[index].classList.add("active");
+
+            }, 3000); // change speed here
+
+        });
+    </script>
+    <div id="lightbox">
+        <span class="close" onclick="closeLightbox()">✖</span>
+
+        <span class="nav prev" onclick="changeImage(-1)">❮</span>
+        <img id="lightbox-img">
+        <span class="nav next" onclick="changeImage(1)">❯</span>
+
+    </div>
+
+</body>
+
+</html>
